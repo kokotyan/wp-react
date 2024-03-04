@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from 'react'; 
+import "./blog.css"
 
 interface Post {
   title: { rendered: string };
@@ -26,7 +27,7 @@ export default function Blog({ post }: BlogProps) {
 
   useEffect(() => {
     getImage();
-  }, []);
+  }, [post]); // postが変更される度にgetImage関数が呼び出される
 
   return (
     <div className="container">
@@ -43,7 +44,7 @@ export default function Blog({ post }: BlogProps) {
           className="blog-excerpt"
           dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}
         />
-        <img src={featuredImage} className="mask" alt="Featured" />
+        {featuredImage && <img src={featuredImage} className="mask" alt="Featured" />}
       </div>
     </div>
   );

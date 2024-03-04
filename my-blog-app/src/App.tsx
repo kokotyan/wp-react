@@ -18,14 +18,14 @@ export default function App() {
         setError(error.message);
         setLoading(false);
       });
-  }
+  };
 
   useEffect(() => {
     fetchPosts();
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div>nowLoading...</div>;
   }
 
   if (error) {
@@ -35,10 +35,7 @@ export default function App() {
   return (
     <div>
       {posts.map((item, index) => (
-        <Blog
-          key={index}
-          post={item}
-        />
+        <Blog key={index} post={item} />
       ))}
     </div>
   );

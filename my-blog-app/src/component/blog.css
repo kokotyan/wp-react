@@ -9,7 +9,6 @@
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
-    margin-bottom: 20px;
 }
 
 img {
@@ -50,22 +49,4 @@ img {
     color: #8a8a8a;
     line-height: 18px;
     margin-bottom: 13px;
-}
-
-/* メディアクエリを追加 */
-@media (max-width: 600px) {
-    .blog-container {
-        width: 100%;
-        height: auto;
-        border-radius: 0;
-        box-shadow: none;
-        margin-bottom: 20px;
-    }
-
-    img {
-        width: 100%;
-        height: auto;
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-    }
 }
